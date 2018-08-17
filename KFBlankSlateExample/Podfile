@@ -1,0 +1,9 @@
+platform :ios, '8.0'
+
+target 'KFBlankSlateExample' do
+    pod 'KFBlankSlate', :path => '../'
+    pod 'DZNEmptyDataSet'
+    pod 'AFNetworking'
+    pod 'MJRefresh'
+end
+
