@@ -1,14 +1,14 @@
 //
-//  SimpleModel.h
+//  GeneralModel.h
 //  KFBlankSlateExample
 //
-//  Created by carefree on 2018/8/17.
+//  Created by Carefree on 2018/8/18.
 //  Copyright © 2018年 Carefree. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface SimpleModel : NSObject
+@interface GeneralModel : NSObject
 
 @property (nonatomic, copy) NSString    *_id;
 @property (nonatomic, copy) NSString    *desc;

@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17158A8B2128152D001A1AAD /* GeneralController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17158A8A2128152D001A1AAD /* GeneralController.m */; };
+		17158A8E2128309C001A1AAD /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17158A8D2128309C001A1AAD /* MainViewController.m */; };
+		17158A9121283215001A1AAD /* GeneralViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17158A9021283215001A1AAD /* GeneralViewModel.m */; };
+		17158A942128322A001A1AAD /* GeneralModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17158A932128322A001A1AAD /* GeneralModel.m */; };
+		17158A98212839D4001A1AAD /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17158A97212839D4001A1AAD /* WebViewController.m */; };
 		17A1D92B2125779500FE15F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A1D92A2125779500FE15F8 /* AppDelegate.m */; };
 		17A1D9312125779500FE15F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A1D92F2125779500FE15F8 /* Main.storyboard */; };
 		17A1D9332125779600FE15F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A1D9322125779600FE15F8 /* Assets.xcassets */; };
 		17A1D9362125779600FE15F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A1D9342125779600FE15F8 /* LaunchScreen.storyboard */; };
 		17A1D9392125779600FE15F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A1D9382125779600FE15F8 /* main.m */; };
-		17A1D94F21267F9800FE15F8 /* SimpleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A1D94E21267F9800FE15F8 /* SimpleController.m */; };
 		17A1D95521269BBF00FE15F8 /* KFNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A1D95421269BBF00FE15F8 /* KFNetworkService.m */; };
-		17A1D9582126A3C100FE15F8 /* SimpleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A1D9572126A3C100FE15F8 /* SimpleViewModel.m */; };
-		17A1D95B2126A40D00FE15F8 /* SimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A1D95A2126A40D00FE15F8 /* SimpleModel.m */; };
 		D3EA60D320E8563D66F921E6 /* libPods-KFBlankSlateExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7645242C870FE6250381107F /* libPods-KFBlankSlateExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17158A892128152D001A1AAD /* GeneralController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralController.h; sourceTree = "<group>"; };
+		17158A8A2128152D001A1AAD /* GeneralController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralController.m; sourceTree = "<group>"; };
+		17158A8C2128309C001A1AAD /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		17158A8D2128309C001A1AAD /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		17158A8F21283215001A1AAD /* GeneralViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralViewModel.h; sourceTree = "<group>"; };
+		17158A9021283215001A1AAD /* GeneralViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralViewModel.m; sourceTree = "<group>"; };
+		17158A922128322A001A1AAD /* GeneralModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneralModel.h; sourceTree = "<group>"; };
+		17158A932128322A001A1AAD /* GeneralModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralModel.m; sourceTree = "<group>"; };
+		17158A96212839D4001A1AAD /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		17158A97212839D4001A1AAD /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		17A1D9262125779500FE15F8 /* KFBlankSlateExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFBlankSlateExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A1D9292125779500FE15F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17A1D92A2125779500FE15F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -28,14 +40,8 @@
 		17A1D9352125779600FE15F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17A1D9372125779600FE15F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A1D9382125779600FE15F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		17A1D94D21267F9800FE15F8 /* SimpleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleController.h; sourceTree = "<group>"; };
-		17A1D94E21267F9800FE15F8 /* SimpleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleController.m; sourceTree = "<group>"; };
 		17A1D95321269BBF00FE15F8 /* KFNetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFNetworkService.h; sourceTree = "<group>"; };
 		17A1D95421269BBF00FE15F8 /* KFNetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFNetworkService.m; sourceTree = "<group>"; };
-		17A1D9562126A3C100FE15F8 /* SimpleViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleViewModel.h; sourceTree = "<group>"; };
-		17A1D9572126A3C100FE15F8 /* SimpleViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleViewModel.m; sourceTree = "<group>"; };
-		17A1D9592126A40D00FE15F8 /* SimpleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleModel.h; sourceTree = "<group>"; };
-		17A1D95A2126A40D00FE15F8 /* SimpleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleModel.m; sourceTree = "<group>"; };
 		1B9E9C95867980793E525997 /* Pods-KFBlankSlateExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KFBlankSlateExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KFBlankSlateExample/Pods-KFBlankSlateExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5E8509E30C1B173FC9BE1DA8 /* Pods-KFBlankSlateExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KFBlankSlateExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-KFBlankSlateExample/Pods-KFBlankSlateExample.release.xcconfig"; sourceTree = "<group>"; };
 		7645242C870FE6250381107F /* libPods-KFBlankSlateExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KFBlankSlateExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +59,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17158A882128150F001A1AAD /* General */ = {
+			isa = PBXGroup;
+			children = (
+				17158A892128152D001A1AAD /* GeneralController.h */,
+				17158A8A2128152D001A1AAD /* GeneralController.m */,
+				17158A8F21283215001A1AAD /* GeneralViewModel.h */,
+				17158A9021283215001A1AAD /* GeneralViewModel.m */,
+				17158A922128322A001A1AAD /* GeneralModel.h */,
+				17158A932128322A001A1AAD /* GeneralModel.m */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		17158A952128399F001A1AAD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				17158A8C2128309C001A1AAD /* MainViewController.h */,
+				17158A8D2128309C001A1AAD /* MainViewController.m */,
+				17158A96212839D4001A1AAD /* WebViewController.h */,
+				17158A97212839D4001A1AAD /* WebViewController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		17A1D91D2125779500FE15F8 = {
 			isa = PBXGroup;
 			children = (
@@ -90,8 +120,8 @@
 		17A1D9492125865B00FE15F8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				17A1D95221269B1E00FE15F8 /* New Group */,
-				17A1D95121269B1100FE15F8 /* Simple */,
+				17158A952128399F001A1AAD /* Common */,
+				17158A882128150F001A1AAD /* General */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -103,26 +133,6 @@
 				17A1D95421269BBF00FE15F8 /* KFNetworkService.m */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		17A1D95121269B1100FE15F8 /* Simple */ = {
-			isa = PBXGroup;
-			children = (
-				17A1D94D21267F9800FE15F8 /* SimpleController.h */,
-				17A1D94E21267F9800FE15F8 /* SimpleController.m */,
-				17A1D9562126A3C100FE15F8 /* SimpleViewModel.h */,
-				17A1D9572126A3C100FE15F8 /* SimpleViewModel.m */,
-				17A1D9592126A40D00FE15F8 /* SimpleModel.h */,
-				17A1D95A2126A40D00FE15F8 /* SimpleModel.m */,
-			);
-			path = Simple;
-			sourceTree = "<group>";
-		};
-		17A1D95221269B1E00FE15F8 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		7C688C29B5CC4A1056E6A926 /* Pods */ = {
@@ -254,12 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17158A942128322A001A1AAD /* GeneralModel.m in Sources */,
+				17158A8B2128152D001A1AAD /* GeneralController.m in Sources */,
 				17A1D9392125779600FE15F8 /* main.m in Sources */,
+				17158A98212839D4001A1AAD /* WebViewController.m in Sources */,
+				17158A9121283215001A1AAD /* GeneralViewModel.m in Sources */,
 				17A1D95521269BBF00FE15F8 /* KFNetworkService.m in Sources */,
+				17158A8E2128309C001A1AAD /* MainViewController.m in Sources */,
 				17A1D92B2125779500FE15F8 /* AppDelegate.m in Sources */,
-				17A1D94F21267F9800FE15F8 /* SimpleController.m in Sources */,
-				17A1D9582126A3C100FE15F8 /* SimpleViewModel.m in Sources */,
-				17A1D95B2126A40D00FE15F8 /* SimpleModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KFBlankSlateExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carefree.KFBlankSlateExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KFBlankSlateExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carefree.KFBlankSlateExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

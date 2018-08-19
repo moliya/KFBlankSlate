@@ -15,12 +15,11 @@
 #endif
 
 /** 数据加载的状态 */
-typedef NS_ENUM(NSUInteger, KFDataLoadState) {
-    KFDataLoadStateReady, //闲置
-    KFDataLoadStateLoading, //加载中
-    KFDataLoadStateEmpty, //数据空
-    KFDataLoadStateFailed, //加载失败
-    KFDataLoadStateLoaded //加载完成
+typedef NS_OPTIONS(NSUInteger, KFDataLoadState) {
+    KFDataLoadStateIdle     = 1 << 0, //闲置
+    KFDataLoadStateLoading  = 1 << 1, //加载中
+    KFDataLoadStateEmpty    = 1 << 2, //数据空
+    KFDataLoadStateFailed   = 1 << 3, //加载失败
 };
 
 @interface KFBlankSlateHandler : NSObject<DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
@@ -28,7 +27,7 @@ typedef NS_ENUM(NSUInteger, KFDataLoadState) {
 @property (nonatomic, weak) UIScrollView        *scrollView;
 @property (nonatomic, assign) KFDataLoadState   state;
 
-// 初始配置
+/** 初始配置 */
 - (void)configure NS_REQUIRES_SUPER;
 
 @end

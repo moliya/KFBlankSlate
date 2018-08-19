@@ -32,14 +32,18 @@
 }
 
 - (void)setState:(KFDataLoadState)state {
+    // 只能设置单个状态，不能设置多个状态
+    BOOL valid = state == KFDataLoadStateIdle || state == KFDataLoadStateEmpty || state == KFDataLoadStateFailed || state == KFDataLoadStateLoading;
+    NSAssert(valid, @"state is unavailable(do not use multiple options)");
+    
     _state = state;
     [self.scrollView reloadEmptyDataSet];
 }
 
 #pragma mark - Other
 - (void)configure {
-    //初始配置写在这里
-    self.state = KFDataLoadStateReady;
+    // 初始配置写在这里
+    self.state = KFDataLoadStateIdle;
 }
 
 @end
