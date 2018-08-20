@@ -83,35 +83,54 @@
     //设置空白状态配置
     KFBlankSlateGeneralHandler *handler = [[KFBlankSlateGeneralHandler alloc] init];
     //设置统一的背景色（加载中、无数据、加载错误）
+    //handler.backgroundColor = [UIColor whiteColor];
     [handler setBackgroundColor:[UIColor colorWithRed:225/255.0 green:255/255.0 blue:250/255.0 alpha:1] forState:KFDataLoadStateLoading | KFDataLoadStateEmpty | KFDataLoadStateFailed];
+    handler.titleFont = [UIFont systemFontOfSize:16];
+    handler.titleColor = [UIColor grayColor];
+    handler.descriptionFont = [UIFont systemFontOfSize:14];
+    handler.descriptionColor = [UIColor lightGrayColor];
+    handler.buttonTitleFont = [UIFont systemFontOfSize:15];
+    handler.buttonTitleColor = [UIColor whiteColor];
     //加载状态配置
-    UIView *customView = [[UIView alloc] init];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loading"]];
-    imageView.frame = CGRectMake(0, 0, 48, 48);
-    [handler setCustomView:customView forState:KFDataLoadStateLoading];
+    [handler setTitle:@"加载中..." forState:KFDataLoadStateLoading];
+    [handler setImage:[UIImage imageNamed:@"loading"] forState:KFDataLoadStateLoading];
+    [handler setImageAnimation:({
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath: @"transform"];
+        animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+        animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_2, 0.0, 0.0, 1.0)];
+        animation.duration = 0.35;
+        animation.cumulative = YES;
+        animation.repeatCount = MAXFLOAT;
+        
+        animation;
+    }) forState:KFDataLoadStateLoading];
+    [handler setAnimate:YES forState:KFDataLoadStateLoading];
     //无数据状态配置
     [handler setTitle:@"数据为空" forState:KFDataLoadStateEmpty];
     [handler setDescription:@"糟糕！这里什么都没有~" forState:KFDataLoadStateEmpty];
     [handler setImage:[UIImage imageNamed:@"empty"] forState:KFDataLoadStateEmpty];
     //加载错误状态配置
     [handler setImage:[UIImage imageNamed:@"error"] forState:KFDataLoadStateFailed];
-    [handler setAttributedButtonTitle:({
-        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"重新载入"];
-        [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, string.length)];
-        [string addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, string.length)];
+    [handler setAttributedDescription:({
+        //设置指定文字样式
+        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"我们的东西不见了！"];
+        [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, string.length)];
+        [string addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, string.length)];
         
         string;
-    }) controlState:UIControlStateNormal forState:KFDataLoadStateFailed];
+    }) forState:KFDataLoadStateFailed];
+    [handler setButtonTitle:@"重新载入" controlState:UIControlStateNormal forState:KFDataLoadStateFailed];
     UIEdgeInsets capInsets = UIEdgeInsetsMake(25.0, 25.0, 25.0, 25.0);
     UIEdgeInsets rectInsets = UIEdgeInsetsZero;
     UIImage *bgImage = [UIImage imageNamed:@"button_background"];
     bgImage = [[bgImage resizableImageWithCapInsets:capInsets resizingMode:UIImageResizingModeStretch] imageWithAlignmentRectInsets:rectInsets];
     [handler setButtonBackgroundImage:bgImage controlState:UIControlStateNormal forState:KFDataLoadStateFailed];
     [handler setButtonBackgroundImage:bgImage controlState:UIControlStateHighlighted forState:KFDataLoadStateFailed];
+    [handler setSpaceHeight:20 forState:KFDataLoadStateFailed];
     //点击按钮回调
     [handler setTapButtonHandler:^(UIButton *button) {
         [self loadData];
-    }];
+    } forState:KFDataLoadStateFailed];
     //禁止滚动
     handler.scrollable = NO;
     

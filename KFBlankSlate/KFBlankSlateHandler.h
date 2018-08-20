@@ -22,6 +22,8 @@ typedef NS_OPTIONS(NSUInteger, KFDataLoadState) {
     KFDataLoadStateFailed   = 1 << 3, //加载失败
 };
 
+FOUNDATION_EXTERN NSInteger const KFDataLoadStateAll;
+
 @interface KFBlankSlateHandler : NSObject<DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
 
 @property (nonatomic, weak) UIScrollView        *scrollView;

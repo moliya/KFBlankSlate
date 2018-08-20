@@ -8,6 +8,8 @@
 
 #import "KFBlankSlateHandler.h"
 
+NSInteger const KFDataLoadStateAll = KFDataLoadStateIdle | KFDataLoadStateLoading | KFDataLoadStateEmpty | KFDataLoadStateFailed;
+
 @implementation KFBlankSlateHandler
 
 #pragma mark - Lifecycle
