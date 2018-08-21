@@ -104,10 +104,10 @@
 - (void)setAnimate:(BOOL)animate forState:(KFDataLoadState)state;
 
 /** 设置state状态下的tapViewHandler回调 */
-- (void)setTapViewHandler:(void (^)(UIView *))tapViewHandler forState:(KFDataLoadState)state;
+- (void)setTapViewHandler:(void (^)(UIView *view))tapViewHandler forState:(KFDataLoadState)state;
 
 /** 设置state状态下的tapButtonHandler回调 */
-- (void)setTapButtonHandler:(void (^)(UIButton *))tapButtonHandler forState:(KFDataLoadState)state;
+- (void)setTapButtonHandler:(void (^)(UIButton *button))tapButtonHandler forState:(KFDataLoadState)state;
 
 
 @end
