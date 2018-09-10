@@ -15,12 +15,12 @@
 #pragma mark - handler
 - (void)setKf_handler:(KFBlankSlateHandler *)kf_handler {
     if (kf_handler != self.kf_handler) {
-        [self willChangeValueForKey:@"kf_handler"]; // KVO
+        [self willChangeValueForKey:NSStringFromSelector(@selector(kf_handler))]; // KVO
         
         objc_setAssociatedObject(self, @selector(kf_handler), kf_handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         kf_handler.scrollView = self;
         
-        [self didChangeValueForKey:@"kf_handler"]; // KVO
+        [self didChangeValueForKey:NSStringFromSelector(@selector(kf_handler))]; // KVO
     }
 }
 

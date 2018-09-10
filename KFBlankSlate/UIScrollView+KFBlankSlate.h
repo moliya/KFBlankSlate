@@ -13,6 +13,6 @@
 @interface UIScrollView (KFBlankSlate)
 
 /** 空白状态配置项 */
-@property (nonatomic, strong) KFBlankSlateHandler   *kf_handler;
+@property (nonatomic, strong) __kindof KFBlankSlateHandler  *kf_handler;
 
 @end
