@@ -7,13 +7,13 @@
 
 ***
 
-<center class="half">
+<div class="half">
     <img src="https://raw.githubusercontent.com/moliya/KFBlankSlate/master/KFBlankSlateExample/KFBlankSlateExample/Screenshots/Untitled1.gif" width="42%"/> <img src="https://raw.githubusercontent.com/moliya/KFBlankSlate/master/KFBlankSlateExample/KFBlankSlateExample/Screenshots/Untitled2.gif" width="42%"/>
-</center>
+</div>
 
-<center class="half">
+<div class="half">
     <img src="https://raw.githubusercontent.com/moliya/KFBlankSlate/master/KFBlankSlateExample/KFBlankSlateExample/Screenshots/Untitled3.gif" width="42%"/> <img src="https://raw.githubusercontent.com/moliya/KFBlankSlate/master/KFBlankSlateExample/KFBlankSlateExample/Screenshots/Untitled4.gif" width="42%"/>
-</center>
+</div>
 
 ## What 
 
