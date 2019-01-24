@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/KFBlankSlate.svg?style=flat)](http://cocoapods.org/pods/KFBlankSlate)
 [![Platform](https://img.shields.io/cocoapods/p/KFBlankSlate.svg?style=flat)](http://cocoapods.org/pods/KFBlankSlate)
 [![Language](https://img.shields.io/badge/language-ObjC-orange.svg)]()
+[![Build Status](https://travis-ci.org/moliya/KFBlankSlate.svg?branch=master)](https://travis-ci.org/moliya/KFBlankSlate)
 [![License](https://img.shields.io/cocoapods/l/KFBlankSlate.svg?style=flat)](https://raw.githubusercontent.com/moliya/KFBlankSlate/master/LICENSE)
 
 ***
