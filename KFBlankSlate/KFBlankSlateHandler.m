@@ -38,6 +38,9 @@ NSInteger const KFDataLoadStateAll = KFDataLoadStateIdle | KFDataLoadStateLoadin
     BOOL valid = state == KFDataLoadStateIdle || state == KFDataLoadStateEmpty || state == KFDataLoadStateFailed || state == KFDataLoadStateLoading;
     NSAssert(valid, @"state is unavailable(do not use multiple options)");
     
+    if (!valid) {
+        return;
+    }
     _state = state;
     [self.scrollView reloadEmptyDataSet];
 }
