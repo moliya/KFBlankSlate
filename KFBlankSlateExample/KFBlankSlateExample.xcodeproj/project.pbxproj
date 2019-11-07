@@ -255,7 +255,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-KFBlankSlateExample/Pods-KFBlankSlateExample-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-KFBlankSlateExample/Pods-KFBlankSlateExample-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -264,7 +264,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KFBlankSlateExample/Pods-KFBlankSlateExample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KFBlankSlateExample/Pods-KFBlankSlateExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B85AC6EB56FDF39428507206 /* [CP] Check Pods Manifest.lock */ = {
