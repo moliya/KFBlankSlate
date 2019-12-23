@@ -29,6 +29,7 @@
 @property (nonatomic, strong) NSMutableDictionary   *touchableSet;
 @property (nonatomic, strong) NSMutableDictionary   *scrollableSet;
 @property (nonatomic, strong) NSMutableDictionary   *animateSet;
+@property (nonatomic, strong) NSMutableDictionary   *multiGestureEnabledSet;
 @property (nonatomic, strong) NSMutableDictionary   *tapButtonHandlers;
 @property (nonatomic, strong) NSMutableDictionary   *tapViewHandlers;
 
@@ -67,6 +68,7 @@
     self.touchableSet = [NSMutableDictionary dictionary];
     self.scrollableSet = [NSMutableDictionary dictionary];
     self.animateSet = [NSMutableDictionary dictionary];
+    self.multiGestureEnabledSet = [NSMutableDictionary dictionary];
     self.tapButtonHandlers = [NSMutableDictionary dictionary];
     self.tapViewHandlers = [NSMutableDictionary dictionary];
     
@@ -186,6 +188,10 @@
     [self setObject:@(animate) inDictionary:self.animateSet forState:state];
 }
 
+- (void)setMultiGestureEnabled:(BOOL)enabled forState:(KFDataLoadState)state {
+    [self setObject:@(enabled) inDictionary:self.multiGestureEnabledSet forState:state];
+}
+
 - (void)setTapButtonHandler:(void (^)(UIButton *))tapButtonHandler forState:(KFDataLoadState)state {
     [self setObject:tapButtonHandler inDictionary:self.tapButtonHandlers forState:state];
 }
@@ -223,6 +229,11 @@
 - (void)setAnimate:(BOOL)animate {
     _animate = animate;
     [self setAnimate:animate forState:KFDataLoadStateAll];
+}
+
+- (void)setMultiGestureEnabled:(BOOL)multiGestureEnabled {
+    _multiGestureEnabled = multiGestureEnabled;
+    [self setMultiGestureEnabled:multiGestureEnabled forState:KFDataLoadStateAll];
 }
 
 - (void)setTapButtonHandler:(void (^)(UIButton *))tapButtonHandler {
