@@ -84,6 +84,7 @@
     self.touchable = YES;
     self.scrollable = YES;
     self.animate = NO;
+    self.multiGestureEnabled = NO;
 }
 
 #pragma mark - Public
@@ -370,6 +371,14 @@
     if (handler) {
         handler(button);
     }
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    if (self.scrollView && [self.scrollView respondsToSelector:@selector(gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:)]) {
+        return [(id)self.scrollView gestureRecognizer:gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:otherGestureRecognizer];
+    }
+    
+    return self.multiGestureEnabled;
 }
 
 #pragma mark - Private

@@ -22,6 +22,8 @@
 @property (nonatomic, assign) BOOL  scrollable;
 /** 是否可动画（将会应用于全部状态） */
 @property (nonatomic, assign) BOOL  animate;
+/** 是否响应对个手势（将会应用于全部状态） */
+@property (nonatomic, assign) BOOL  multiGestureEnabled;
 /** 点击按钮的事件回调（将会应用于全部状态） */
 @property (nonatomic, copy) void (^tapButtonHandler)(UIButton *button);
 /** 点击空白视图的事件回调（将会应用于全部状态） */
@@ -108,6 +110,9 @@
 
 /** 设置state状态下的tapButtonHandler回调 */
 - (void)setTapButtonHandler:(void (^)(UIButton *button))tapButtonHandler forState:(KFDataLoadState)state;
+
+/** 设置state状态下的multiGestureEnabled属性 */
+- (void)setMultiGestureEnabled:(BOOL)enabled forState:(KFDataLoadState)state;
 
 
 @end
