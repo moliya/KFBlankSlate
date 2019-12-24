@@ -29,7 +29,6 @@
 @property (nonatomic, strong) NSMutableDictionary   *touchableSet;
 @property (nonatomic, strong) NSMutableDictionary   *scrollableSet;
 @property (nonatomic, strong) NSMutableDictionary   *animateSet;
-@property (nonatomic, strong) NSMutableDictionary   *multiGestureEnabledSet;
 @property (nonatomic, strong) NSMutableDictionary   *tapButtonHandlers;
 @property (nonatomic, strong) NSMutableDictionary   *tapViewHandlers;
 
@@ -68,7 +67,6 @@
     self.touchableSet = [NSMutableDictionary dictionary];
     self.scrollableSet = [NSMutableDictionary dictionary];
     self.animateSet = [NSMutableDictionary dictionary];
-    self.multiGestureEnabledSet = [NSMutableDictionary dictionary];
     self.tapButtonHandlers = [NSMutableDictionary dictionary];
     self.tapViewHandlers = [NSMutableDictionary dictionary];
     
@@ -86,7 +84,6 @@
     self.touchable = YES;
     self.scrollable = YES;
     self.animate = NO;
-    self.multiGestureEnabled = NO;
 }
 
 #pragma mark - Public
@@ -188,10 +185,6 @@
     [self setObject:@(animate) inDictionary:self.animateSet forState:state];
 }
 
-- (void)setMultiGestureEnabled:(BOOL)enabled forState:(KFDataLoadState)state {
-    [self setObject:@(enabled) inDictionary:self.multiGestureEnabledSet forState:state];
-}
-
 - (void)setTapButtonHandler:(void (^)(UIButton *))tapButtonHandler forState:(KFDataLoadState)state {
     [self setObject:tapButtonHandler inDictionary:self.tapButtonHandlers forState:state];
 }
@@ -229,11 +222,6 @@
 - (void)setAnimate:(BOOL)animate {
     _animate = animate;
     [self setAnimate:animate forState:KFDataLoadStateAll];
-}
-
-- (void)setMultiGestureEnabled:(BOOL)multiGestureEnabled {
-    _multiGestureEnabled = multiGestureEnabled;
-    [self setMultiGestureEnabled:multiGestureEnabled forState:KFDataLoadStateAll];
 }
 
 - (void)setTapButtonHandler:(void (^)(UIButton *))tapButtonHandler {
@@ -385,7 +373,14 @@
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    return [[self availableObjectInDictionary:self.multiGestureEnabledSet] boolValue];
+    // 判断otherGestureRecognizer是不是系统pop手势
+    if ([otherGestureRecognizer.view isKindOfClass:NSClassFromString(@"UILayoutContainerView")]) {
+        // 判断系统手势的state是began还是fail，同时判断scrollView的位置是不是正好在最左边
+        if (otherGestureRecognizer.state == UIGestureRecognizerStateBegan && self.scrollView.contentOffset.x == 0) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 #pragma mark - Private
