@@ -81,6 +81,13 @@
     };
 }
 
+- (KFBlankSlateGeneralHandler * _Nonnull (^)(void))onFinished {
+    return ^id {
+        self.currentConfigState = KFDataLoadStateFinished;
+        return self;
+    };
+}
+
 - (KFBlankSlateGeneralHandler * _Nonnull (^)(NSString * _Nullable))title {
     return ^id(NSString *title) {
         [self setTitle:title forState:self.currentConfigState];

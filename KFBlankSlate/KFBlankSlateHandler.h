@@ -20,6 +20,7 @@ typedef NS_OPTIONS(NSUInteger, KFDataLoadState) {
     KFDataLoadStateLoading  = 1 << 1, //加载中
     KFDataLoadStateEmpty    = 1 << 2, //数据空
     KFDataLoadStateFailed   = 1 << 3, //加载失败
+    KFDataLoadStateFinished = 1 << 4, //加载完成
 };
 
 FOUNDATION_EXTERN NSInteger const KFDataLoadStateAll;

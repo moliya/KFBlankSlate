@@ -15,7 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - DZNEmptyDataSet (1.8.1)
-  - KFBlankSlate (1.2):
+  - KFBlankSlate (1.9):
     - DZNEmptyDataSet
   - MJRefresh (3.1.15.3)
 
@@ -26,7 +26,7 @@ DEPENDENCIES:
   - MJRefresh
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - AFNetworking
     - DZNEmptyDataSet
     - MJRefresh
@@ -38,9 +38,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  KFBlankSlate: 789b476fe3cfe60426eb10709cc130a5058945b5
+  KFBlankSlate: 836d8821e8ce300fd1f13bd8a907ed47dd3adbde
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
 
 PODFILE CHECKSUM: 801e933bdb0804b6dcf742ea87ee67e630191132
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.2

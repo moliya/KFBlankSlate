@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (KFBlankSlateGeneralHandler * (^)(void))onFailed;
 
+- (KFBlankSlateGeneralHandler * (^)(void))onFinished;
+
 - (KFBlankSlateGeneralHandler * (^)(NSString * _Nullable))title;
 
 - (KFBlankSlateGeneralHandler * (^)(NSAttributedString * _Nullable))attributedTitle;

@@ -386,6 +386,9 @@
     if (state & KFDataLoadStateFailed) {
         dictionary[@(KFDataLoadStateFailed)] = object;
     }
+    if (state & KFDataLoadStateFinished) {
+        dictionary[@(KFDataLoadStateFinished)] = object;
+    }
 }
 
 - (void)setObject:(id)object forControlState:(UIControlState)cState inDictionary:(NSMutableDictionary *)dictionary forState:(KFDataLoadState)state {
@@ -424,6 +427,15 @@
         }
         newDict[@(cState)] = object;
         dictionary[@(KFDataLoadStateFailed)] = newDict;
+    }
+    if (state & KFDataLoadStateFinished) {
+        NSMutableDictionary *newDict = [NSMutableDictionary dictionary];
+        NSDictionary *oldDict = [self availableObjectInDictionary:dictionary forState:KFDataLoadStateFinished];
+        if (oldDict) {
+            [newDict addEntriesFromDictionary:oldDict];
+        }
+        newDict[@(cState)] = object;
+        dictionary[@(KFDataLoadStateFinished)] = newDict;
     }
 }
 
