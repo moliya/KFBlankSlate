@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "KFBlankSlate"
-  s.version       = "1.9"
+  s.version       = "2.0"
   s.summary       = "showing the custom view for empty/loading/network error, based on DZNEmptyDataSet."
   s.homepage      = "https://github.com/moliya/KFBlankSlate"
   s.license       = "MIT"
